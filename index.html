@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+    <title>CotAções</title>	
+	<link href="./css/styles.css" rel="stylesheet">
+	<link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>	
+</head>
+<body>
+	
+	<div id="container">	
+		<!-- Menu superior -->
+		
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <div class="container-fluid">
+			<a class="navbar-brand" href="index.html">CotAções</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			  <ul class="navbar-nav">			
+				<li class="nav-item">
+				  <a class="nav-link" href="index.html">Página inicial</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="sobre.html">Sobre</a>
+				</li>
+			  </ul>
+			</div> -->
+		  </div>
+		</nav>	
+		
+		
+		<!-- Formulário de pesquisa de ativo -->
+		
+		<div id="search">
+			<form class="d-flex" action="" method="POST" id="myForm">
+			  <input class="form-control me-2 input-width" type="search" id="txtSymbol" placeholder=" Ex: PETR4" aria-label="Search">
+			  <button class="btn btn-info" type="button" onclick="validar()">Pesquisar</button>
+			</form>		
+		</div>
+		
+		<!-- Informações sobre erros -->
+		<div id="error">
+			Ocorreu um problema, tente novamente!
+		</div>
+		
+		<!-- Exibição dos dados -->
+		
+		<div id="wrapper">
+			<div id="table" class="table-div">
+				<table id="series-table" class="table">
+				  <thead>
+					<tr class="table-info">			  
+					  <th scope="col">Data</th>
+					  <th scope="col">Abertura</th>
+					  <th scope="col">Fechamento</th>
+					</tr>
+				  </thead>
+				  <tbody></tbody>
+				</table>	
+			</div>
+			
+			<div id="chart-column" class="column-chart"></div>
+		</div>
+		
+		<div class="col-md-12">
+		<div id="chart-line" class="line-chart"></div>
+		</div>		
+	</div>
+	
+	<!-- Rodapé da página -->
+	<footer id="page-footer">
+	  <p>
+		Johon Marques &nbsp;
+		<a href="https://www.linkedin.com/in/johon-marques/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:1.5rem;color:#fff"></i></a>  &nbsp;|&nbsp;  
+		<a href="https://github.com/JohonMarques" target="_blank"><i class="fa fa-github" style="font-size:1.5rem;color:#fff"></i></a>
+	  </p>
+	</footer>
+	
+	<!-- Inclusão dos scripts -->
+	<script type="text/javascript" src="./js/alphavantage.js"></script>			
+	<script type="text/javascript" src="./bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
